@@ -10,6 +10,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class ProfileComponent implements OnInit {
 
   title = 'Pesquisa de usuários do Github';
+    
   public search;
   public user: any
 

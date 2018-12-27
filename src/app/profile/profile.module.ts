@@ -4,6 +4,7 @@ import { MatInputModule, MatButtonModule, MatCardModule } from '@angular/materia
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [],
@@ -15,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
+    MatToolbarModule
   ],
   exports: [
     MatFormFieldModule,
@@ -22,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,    
     FormsModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule
   ],
 })
 export class ProfileModule { }
