@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { ProfileService } from './profile.service';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -9,9 +10,16 @@ import { ProfileService } from './profile.service';
 export class ProfileComponent implements OnInit {
 
   title = 'Pesquisa de usuários do Github';
+  public search;
   public user: any
 
-  constructor(private appService: ProfileService) { }  
+  postForm = this.fb.group({
+    search: [null, [Validators.required]],    
+  });
+
+  constructor(
+    private appService: ProfileService,
+    private fb: FormBuilder) { }  
   
   getUser(user?): void {
     this.appService.getUser(user).subscribe(
@@ -21,9 +29,14 @@ export class ProfileComponent implements OnInit {
       });             
   }
 
+  searchUser() {
+    let query = this.postForm.value.search    
+    this.getUser(query);
+  }
+
   ngOnInit() {
-    let user = 'marcostark';
-    this.getUser(user);
+    //let user = 'marcostark';
+    //this.getUser(user);
   }
   
 }

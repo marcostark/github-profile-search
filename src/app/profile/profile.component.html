@@ -1,6 +1,25 @@
-<p>
-  Perfil do usuário
-</p>
-<p>
+<form [formGroup]="postForm" novalidate>
+
+    <mat-card class="card-form">
+        <mat-card-header>
+            <mat-card-title>Buscar usuário</mat-card-title>
+          </mat-card-header>
+          
+          <mat-card-content>
+              <div class="row">
+                  <div class="col">
+                      <mat-form-field>
+                        <input matInput placeholder="Pesquisar" formControlName="search">
+                      </mat-form-field>                                      
+                  </div>
+              </div>
+          </mat-card-content>   
+
+    <button mat-raised-button color="primary" (click)="searchUser()">Buscar</button>   
+  </mat-card>
+</form>
+
+<hr>
+<pre>
   {{ user | json}}
-</p>
+</pre>
