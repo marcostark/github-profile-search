@@ -1,10 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatInputModule, MatButtonModule, MatCardModule } from '@angular/material';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { MatButtonModule } from "@angular/material/button";
+import { MatInputModule } from "@angular/material/input";
+import { MatCardModule } from "@angular/material/card";
+
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
+import { MatToolbarModule } from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [],
@@ -16,16 +19,16 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
   ],
   exports: [
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule,    
+    MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
   ],
 })
-export class ProfileModule { }
+export class ProfileModule {}
